@@ -1,0 +1,29 @@
+﻿{
+    "metadata": {
+        "industrialField": "",
+        "packageType": "ServerExtPrj",
+        "id": "EngraveItServer",
+        "version": "1.0.0.0",
+        "guid": "3c62b829-dcda-45c8-8b85-f4bbab0fb63b",
+        "configurationName": "",
+        "platformName": "",
+        "creationTime": 0,
+        "authors": "",
+        "owners": "",
+        "summary": "",
+        "licenseUrl": "",
+        "projectUrl": "",
+        "iconUrl": "",
+        "requireLicenseAcceptance": false,
+        "description": "",
+        "releaseNotes": "",
+        "copyright": "",
+        "tags": "",
+        "dependencies": [],
+        "references": []
+    },
+    "files": [],
+    "symbols": [],
+    "flags": {},
+    "fileformat": 1
+}

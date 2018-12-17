@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.25">
+	<Project ProjectGUID="{A33903F0-A46F-41F0-A996-E3644587A00A}" ShowHideConfigurations="#x306">
+		<System>
+			<Licenses>
+				<Target>
+					<ManualSelect>{E40D9E9D-E242-457A-9AC7-C915753AC810}</ManualSelect>
+					<ManualSelect>{E8CE55B5-3125-49FB-B21B-4CB7A751D68B}</ManualSelect>
+					<ManualSelect>{067D1C29-F119-431C-A681-E503451951C7}</ManualSelect>
+				</Target>
+			</Licenses>
+		</System>
+	</Project>
+</TcSmProject>
