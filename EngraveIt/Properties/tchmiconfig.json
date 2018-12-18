@@ -21,6 +21,11 @@
           "name": "Themes/Base/Style.css",
           "description": "",
           "type": "Stylesheet"
+        },
+        {
+          "name": "Themes/Base/jquery-ui.min.css",
+          "description": "",
+          "type": "Stylesheet"
         }
       ],
       "replacesThemeForControls": []

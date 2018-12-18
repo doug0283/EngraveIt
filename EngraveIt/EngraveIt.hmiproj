@@ -91,6 +91,7 @@
     <Folder Include="Imports\Images" />
     <Folder Include="Imports\Videos" />
     <Folder Include="Localization" />
+    <Folder Include="External" />
     <Folder Include="Server\Extensions\ADS" />
     <Folder Include="Server\Extensions\TcHmiEventLogger" />
     <Folder Include="Server\Extensions\TcHmiLua" />
@@ -118,6 +119,9 @@
     <Content Include=".hmipkgs\packages.hmipkgs">
       <SubType>Content</SubType>
       <Visible>true</Visible>
+    </Content>
+    <Content Include="External\jquery-ui.min.js">
+      <SubType>Content</SubType>
     </Content>
     <Content Include="FavIcon.ico">
       <SubType>Content</SubType>
@@ -206,6 +210,9 @@
     <Content Include="Themes\Base\Base.theme">
       <SubType>Content</SubType>
       <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base\jquery-ui.min.css">
+      <SubType>Content</SubType>
     </Content>
     <Content Include="Themes\Base\Style.css">
       <SubType>Content</SubType>
