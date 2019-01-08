@@ -1,8 +1,8 @@
-{
+﻿{
   "$schema": "ExtensionSettings.Schema.json",
   "guid": "3c62b829-dcda-45c8-8b85-f4bbab0fb63b",
   "version": "1.0.0.0",
-  "configVersion": "1.0.0.0",
+  "configVersion": "1.0.0.10",
   "symbols": {
     "RandomValue": {
       "readValue": {
@@ -20,6 +20,18 @@
     "MaxRandom": {
       "readValue": {
         "$ref": "tchmi:general#/definitions/Integer"
+      },
+      "hidden": false
+    },
+    "GetCustomers": {
+      "readValue": {
+        "$ref": "#/definitions/Customers"
+      },
+      "hidden": false
+    },
+    "GetProducts": {
+      "readValue": {
+        "$ref": "#/definitions/Products"
       },
       "hidden": false
     }

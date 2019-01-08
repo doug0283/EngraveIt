@@ -1,29 +1,72 @@
 ﻿{
-    "metadata": {
-        "industrialField": "",
-        "packageType": "ServerExtPrj",
-        "id": "EngraveItServer",
-        "version": "1.0.0.0",
-        "guid": "3c62b829-dcda-45c8-8b85-f4bbab0fb63b",
-        "configurationName": "",
-        "platformName": "",
-        "creationTime": 0,
-        "authors": "",
-        "owners": "",
-        "summary": "",
-        "licenseUrl": "",
-        "projectUrl": "",
-        "iconUrl": "",
-        "requireLicenseAcceptance": false,
-        "description": "",
-        "releaseNotes": "",
-        "copyright": "",
-        "tags": "",
-        "dependencies": [],
-        "references": []
+  "metadata": {
+    "industrialField": "",
+    "packageType": "ServerExtPrj",
+    "id": "EngraveItServer",
+    "version": "1.0.0.0",
+    "guid": "3c62b829-dcda-45c8-8b85-f4bbab0fb63b",
+    "configurationName": "",
+    "platformName": "",
+    "creationTime": 1546634259,
+    "authors": "",
+    "owners": "",
+    "summary": "",
+    "licenseUrl": "",
+    "projectUrl": "",
+    "iconUrl": "",
+    "requireLicenseAcceptance": false,
+    "description": "",
+    "releaseNotes": "",
+    "copyright": "",
+    "tags": "",
+    "dependencies": [],
+    "references": []
+  },
+  "files": [
+    {
+      "target": "Dapper.dll"
     },
-    "files": [],
-    "symbols": [],
-    "flags": {},
-    "fileformat": 1
+    {
+      "target": "Dapper.xml"
+    },
+    {
+      "target": "EngraveItServer.Config.json"
+    },
+    {
+      "target": "EngraveItServer.dll"
+    },
+    {
+      "target": "EngraveItServer.Language.en.json"
+    },
+    {
+      "target": "EngraveItServer.Schema.json"
+    },
+    {
+      "target": "ExtensionSettings.Schema.json"
+    },
+    {
+      "target": "Language.Schema.json"
+    },
+    {
+      "target": "System.Synchronization.dll"
+    },
+    {
+      "target": "TcHmiSrvExtNet.dll"
+    },
+    {
+      "target": "TcHmiSrvExtNet.DynamicSymbols.dll"
+    },
+    {
+      "target": "TcHmiSrvExtNet.Management.dll"
+    },
+    {
+      "target": "TcHmiSrvExtNet.Versioning.dll"
+    },
+    {
+      "target": "TcHmiSrvExtNet.xml"
+    }
+  ],
+  "symbols": [],
+  "flags": {},
+  "fileformat": 1
 }

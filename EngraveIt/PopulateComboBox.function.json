@@ -1,0 +1,39 @@
+﻿{
+  "function": {
+    "name": "PopulateComboBox",
+    "displayName": "PopulateComboBox",
+    "visible": true,
+    "category": "",
+    "waitMode": "Synchronous",
+    "injectContextObject": false,
+    "description": "",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String"
+    },
+    "arguments": [
+      {
+        "name": "Control",
+        "displayName": "Control",
+        "type": "tchmi:general#/definitions/String",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      },
+      {
+        "name": "Data",
+        "displayName": "Data",
+        "type": "tchmi:general#/definitions/Object",
+        "description": "",
+        "defaultValue": "{\r\n  \"ACCESS\": \"0\",\r\n  \"CUSTOMERDATA\": null,\r\n  \"DOMAIN\": null,\r\n  \"HIDDEN\": null,\r\n  \"MAPPING\": null,\r\n  \"OPTIONS\": null,\r\n  \"SCHEMA\": null,\r\n  \"USEMAPPING\": null\r\n}",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      }
+    ]
+  },
+  "$schema": "C:/TwinCAT/Functions/TE2000-HMI-Engineering/Infrastructure/TcHmiFramework/Latest/Schema/FunctionDescription.Schema.json"
+}

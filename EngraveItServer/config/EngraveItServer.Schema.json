@@ -1,4 +1,37 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object"
+  "definitions": {
+    "Customers": {
+      "type": "object",
+      "properties": {
+        "ListItems": {
+          "type": "array",
+          "items": {
+            "FullName": {
+              "type": "string"
+            },
+            "ID": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "Products": {
+      "type": "object",
+      "properties": {
+        "ListItems": {
+          "type": "array",
+          "items": {
+            "Title": {
+              "type": "string"
+            },
+            "ID": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
 }

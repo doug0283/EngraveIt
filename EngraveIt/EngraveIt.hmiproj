@@ -15,7 +15,7 @@
     <HmiFrameworkVersion>Latest</HmiFrameworkVersion>
     <HmiCommunicationServerPort>3000</HmiCommunicationServerPort>
     <HmiInitial>1.10.1171.142</HmiInitial>
-    <HmiRecent>1.10.1171.142</HmiRecent>
+    <HmiRecent>1.10.1171.165</HmiRecent>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -93,6 +93,7 @@
     <Folder Include="Localization" />
     <Folder Include="External" />
     <Folder Include="Server\Extensions\ADS" />
+    <Folder Include="Server\Extensions\EngraveItServer" />
     <Folder Include="Server\Extensions\TcHmiEventLogger" />
     <Folder Include="Server\Extensions\TcHmiLua" />
     <Folder Include="Server\Extensions\TcHmiRecipeManagement" />
@@ -120,6 +121,9 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
+    <Content Include="CommonFunctions.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="External\jquery-ui.min.js">
       <SubType>Content</SubType>
     </Content>
@@ -135,6 +139,12 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
+    <Content Include="PopulateComboBox.function.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PopulateComboBox.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Server\Extensions\ADS\ADS.Config.default.json">
       <SubType>Content</SubType>
     </Content>
@@ -142,6 +152,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\Extensions\ADS\ADS.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\Extensions\EngraveItServer\EngraveItServer.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\Extensions\EngraveItServer\EngraveItServer.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\Extensions\EngraveItServer\EngraveItServer.Storage.json">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\Extensions\TcHmiEventLogger\TcHmiEventLogger.Config.default.json">
@@ -307,5 +326,13 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <TcHmiReference Include="3c62b829-dcda-45c8-8b85-f4bbab0fb63b">
+      <Type>SrvRefSolution</Type>
+      <RelativePath>EngraveItServer/EngraveItServer.csproj</RelativePath>
+      <Domain>
+      </Domain>
+    </TcHmiReference>
   </ItemGroup>
 </Project>

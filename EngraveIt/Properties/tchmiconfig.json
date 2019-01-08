@@ -6,7 +6,8 @@
   "startupView": "Desktop.view",
   "tcHmiServer": {
     "websocketIntervalTime": 500,
-    "websocketTimeout": 5000
+    "websocketTimeout": 5000,
+    "websocketSubscriptionMode": "Change"
   },
   "activeTheme": "Base",
   "themes": {
@@ -46,9 +47,20 @@
       "preload": false
     }
   ],
-  "userFunctions": [],
+  "userFunctions": [
+    {
+      "url": "PopulateComboBox.js"
+    }
+  ],
   "symbols": {
-    "internal": {}
+    "internal": {
+      "Btn1Pressed": {
+        "value": false,
+        "type": "tchmi:general#/definitions/Boolean",
+        "persist": false,
+        "readonly": false
+      }
+    }
   },
   "trigger": [],
   "actionTemplates": [],

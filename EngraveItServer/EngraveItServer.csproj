@@ -115,10 +115,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Manifest.json" />
+    <Compile Include="Customer.cs" />
     <Compile Include="EngraveItServer.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="ExtensionErrorValue.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
   </ItemGroup>

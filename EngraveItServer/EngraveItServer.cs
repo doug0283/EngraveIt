@@ -1,6 +1,12 @@
 ﻿using System;
 using TcHmiSrv;
 using TcHmiSrv.Management;
+using Dapper;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+using System.Linq;
+using TcHmiSrv.DynamicSymbols;
+//_data.inventoryList.ListItems = orderDeta
 
 namespace EngraveItServer
 {
@@ -8,6 +14,10 @@ namespace EngraveItServer
     // The path of the server extension is available via the ExtensionPath property if the default class of the server extension inherits from the ExtensionWithPath base class instead.
     public class EngraveItServer : IExtension
     {
+        //SQL Connection String//
+        private static string CONNECTIONSTRING = "Server=KURTM-NB01\\SQLEXPRESS;Database=EngraveIT;User Id = remote; Password=remote;";
+
+
         private ITcHmiSrvExtHost _host = null;
 
         private object _shutdownLock = new object();
@@ -69,6 +79,10 @@ namespace EngraveItServer
                         // Use the mapping to check which command is requested
                         switch (mapping)
                         {
+                            case "GetCustomers":
+                                ret = GetCustomers(command);
+                                break;
+                                    
                             case "RandomValue":
                                 ret = RandomValue(command);
                                 break;
@@ -76,7 +90,9 @@ namespace EngraveItServer
                             case "MaxRandom":
                                 ret = MaxRandom(command);
                                 break;
-
+                            case "GetProducts":
+                                ret = GetProducts(command);
+                                break;
                             default:
                                 ret = ErrorValue.HMI_E_EXTENSION;
                                 break;
@@ -143,6 +159,43 @@ namespace EngraveItServer
                     return ErrorValue.HMI_E_EXTENSION;
                 }
             }
+        }
+
+        private ErrorValue GetProducts(Command command)
+        {
+            string sql = "SELECT id, Title FROM Inventory";
+
+            List<Product> product = new List<Product>();
+
+            using (var connection = new SqlConnection(CONNECTIONSTRING))
+            {
+                product = connection.Query<Product>(sql).ToList();
+            }
+
+            command.ReadValue = TcHmiSerializer.SerializeObject(product);
+
+
+            command.ExtensionResult = ExtensionErrorValue.HMI_EXT_SUCCESS;
+            return ErrorValue.HMI_SUCCESS;
+        }
+
+        // Gets a full list of all customers ordered by lastname.
+        // Fields: [LastName, FirstName] As FullName, ID
+        private ErrorValue GetCustomers(Command command)
+        {
+            string sql = "SELECT LastName + ', ' + FirstName As FullName, ID FROM Customers Order By LastName";
+
+            List<Customer> customers = new List<Customer>();
+
+            using (var connection = new SqlConnection(CONNECTIONSTRING))
+            {
+                customers = connection.Query<Customer>(sql).ToList();
+            }
+
+            command.ReadValue = TcHmiSerializer.SerializeObject(customers);
+           
+            command.ExtensionResult = ExtensionErrorValue.HMI_EXT_SUCCESS;
+            return ErrorValue.HMI_SUCCESS;
         }
 
         // Generates a random number and writes it to the read value of the given command.

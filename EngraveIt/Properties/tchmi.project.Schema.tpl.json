@@ -1,4 +1,17 @@
 ﻿{
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"definitions": { }
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "Symbol_Of_String": {
+      "allOf": [
+        {
+          "$ref": "tchmi:framework#/definitions/Symbol"
+        },
+        {
+          "frameworkSymbolSubType": {
+            "$ref": "tchmi:general#/definitions/String"
+          }
+        }
+      ]
+    }
+  }
 }

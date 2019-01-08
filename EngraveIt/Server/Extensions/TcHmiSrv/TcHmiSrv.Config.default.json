@@ -37,6 +37,14 @@
             "REQUIRED": false,
             "STARTUPTYPE": 1
         },
+        "EngraveItServer": {
+            "ENABLED": true,
+            "NAME": "EngraveItServer",
+            "OFFLINE": false,
+            "PATH": "..\\..\\EngraveItServer\\bin\\Debug\\",
+            "REQUIRED": false,
+            "STARTUPTYPE": 1
+        },
         "TcHmiEventLogger": {
             "ENABLED": true,
             "NAME": "TcHmiEventLogger",
@@ -968,6 +976,66 @@
                 "readOnly": true,
                 "transient": true,
                 "type": "object"
+            },
+            "USEMAPPING": true
+        },
+        "EngraveItServer.Config": {
+            "ACCESS": 0,
+            "DOMAIN": "EngraveItServer",
+            "HIDDEN": true,
+            "MAPPING": "Config",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
+        "EngraveItServer.GetCustomers": {
+            "ACCESS": 3,
+            "DOMAIN": "EngraveItServer",
+            "HIDDEN": false,
+            "MAPPING": "GetCustomers",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "$ref": "#/definitions/Customers"
+            },
+            "USEMAPPING": true
+        },
+        "EngraveItServer.GetProducts": {
+            "ACCESS": 3,
+            "DOMAIN": "EngraveItServer",
+            "HIDDEN": false,
+            "MAPPING": "GetProducts",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "$ref": "#/definitions/Products"
+            },
+            "USEMAPPING": true
+        },
+        "EngraveItServer.MaxRandom": {
+            "ACCESS": 3,
+            "DOMAIN": "EngraveItServer",
+            "HIDDEN": false,
+            "MAPPING": "MaxRandom",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/Integer"
+            },
+            "USEMAPPING": true
+        },
+        "EngraveItServer.RandomValue": {
+            "ACCESS": 1,
+            "DOMAIN": "EngraveItServer",
+            "HIDDEN": false,
+            "MAPPING": "RandomValue",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/Integer"
+                    },
+                    {
+                        "readOnly": true
+                    }
+                ]
             },
             "USEMAPPING": true
         },
